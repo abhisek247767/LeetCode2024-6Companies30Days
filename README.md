@@ -28,4 +28,7 @@ This repository is encourage people to contribute to open source throughout octo
 * Deadline is 31st October for Hacktoberfest but my repository always open for alltime.
 * I will personally check each Pull Request and Try to write your own words 🙂
 
+## + Follow Me :) Quick Approval of Pull Request
+To get approval of the pull request much quicker and faster (Follow Me)🚀
+
 # Hurrah !! You have done your first contribution ✔️
