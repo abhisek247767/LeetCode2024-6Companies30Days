@@ -1,7 +1,7 @@
 # Hacktoberfest_2023
 This repository is encourage people to contribute to open source throughout october.Follow me on Github🙊
 
-![hack](https://user-images.githubusercontent.com/69287212/196059967-10a30315-d16d-4d70-8872-8878d9feeb02.PNG)
+![image](https://github.com/user-attachments/assets/87d213ea-935b-4484-ac3d-8fcc13a53cf6)
 
 ## Rules To earn your Hacktoberfest reward.
 
