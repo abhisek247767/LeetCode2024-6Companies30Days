@@ -1,6 +1,4 @@
-Here’s a modified version of the `README.md` file with enhanced content and more detailed steps for contributing to the repository. The new version includes step-by-step instructions with commands to help contributors.
 
----
 
 # Hacktoberfest 2024 🎉
 This repository is designed to encourage contributions to open source throughout the month of October as part of Hacktoberfest. Follow me on GitHub 🙊 and join in the fun of contributing to this exciting open-source project.
