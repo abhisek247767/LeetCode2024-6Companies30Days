@@ -1,3 +1,21 @@
+// Title: Music Playlist Management System
+
+// You are tasked with creating a music playlist management system using a doubly linked list. Each node in the doubly linked list represents a song in the playlist. The system should allow for the following operations:
+
+// Add Song at Beginning: Add a new song to the front of the playlist.
+// Add Song at End: Add a new song to the end of the playlist.
+// Insert Song After a Specific Title: Insert a song after a song with a specific title.
+// Remove First Song: Remove the first song in the playlist.
+// Remove Last Song: Remove the last song in the playlist.
+// Remove a Specific Song: Remove a song with a specific title.
+// Display Playlist: Print the list of songs currently in the playlist.
+// Play Next Song: Move to the next song in the playlist.
+// Play Previous Song: Move to the previous song in the playlist.
+// Input/Output Format
+// 1.The user will be presented with a menu of operations.
+// 2.The user will input their choice of operation, followed by any required song titles or positions.
+// 3.The program will display appropriate messages and the current playlist.
+
 import java.util.Scanner;
 
 import static java.lang.System.exit;

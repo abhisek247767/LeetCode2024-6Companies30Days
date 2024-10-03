@@ -1,4 +1,18 @@
+// Title: Library Management System
 
+// You are tasked with creating a simple library management system using a linked list. Each node in the linked list represents a book in the library. The system should allow for the following operations:
+
+// Add Book at Beginning: Add a new book to the front of the list.
+// Add Book at End: Add a new book to the end of the list.
+// Insert Book After a Specific Title: Insert a book after a book with a specific title.
+// Remove First Book: Remove the first book in the list (e.g., the most recently added book).
+// Remove Last Book: Remove the last book in the list.
+// Remove a Specific Book: Remove a book with a specific title.
+// Display Books: Print the list of books currently available in the library.
+// Input/Output Format
+// 1.The user will be presented with a menu of operations.
+// 2.The user will input their choice of operation, followed by any required book titles or positions.
+// 3.The program will display appropriate messages and the current list of books.
 import java.util.Scanner;
 
 import static java.lang.System.exit;
