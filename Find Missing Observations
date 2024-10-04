@@ -1,0 +1,46 @@
+/*
+2028. Find Missing Observations
+https://leetcode.com/problems/find-missing-observations/
+*/
+
+class Solution {
+    public int[] missingRolls(int[] rolls, int mean, int n) {
+        int m = rolls.length;
+        int totalSum = mean * (n + m);
+        int observedSum = 0;
+        
+        for (int roll : rolls) {
+            observedSum += roll;
+        }
+        
+        int missingSum = totalSum - observedSum;
+        
+        if (missingSum < n || missingSum > 6 * n) {
+            return new int[0];
+        }
+        
+        int base = missingSum / n;
+        int remainder = missingSum % n;
+        
+        int[] result = new int[n];
+        for (int i = 0; i < n; i++) {
+            result[i] = base + (i < remainder ? 1 : 0);
+        }
+        
+        return result;
+    }
+}
+
+/*
+Example 1:
+
+Input: rolls = [3,2,4,3], mean = 4, n = 2
+Output: [6,6]
+Explanation: The mean of all n + m rolls is (3 + 2 + 4 + 3 + 6 + 6) / 6 = 4.
+
+Example 2:
+
+Input: rolls = [1,5,6], mean = 3, n = 4
+Output: [2,3,2,2]
+Explanation: The mean of all n + m rolls is (1 + 5 + 6 + 2 + 3 + 2 + 2) / 7 = 3.
+*/
