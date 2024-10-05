@@ -3,19 +3,18 @@ class Solution
 public:
     int climbStairs(int n)
     {
-        if (n < 2)
-        {
-            return 1;
-        }
-        int firstStep = 1;
-        int secondStep = 1;
-        int thirdStep = 0;
-        for (int i = 2; i <= n; i++)
-        {
-            thirdStep = firstStep + secondStep;
-            firstStep = secondStep;
-            secondStep = thirdStep;
-        }
-        return thirdStep;
+     if(n<=1)return 1;
+
+     vector<int>dp;
+     dp.assgin(n+1,-1);
+     
+       for(int i=0;i<=n;i++){
+        if(i>=2)
+        dp[i]=dp[i-1]+dp[i-2];
+        else
+        dp[i]=1;
+       }
+
+       return dp[n];
     }
 };
