@@ -1,29 +1,19 @@
-# Problem: Peak Index in a Mountain Array
+/* # Problem: Peak Index in a Mountain Array
 
 You are given an integer mountain array `arr` of length `n` where the values increase to a peak element and then decrease.
-
 Your task is to find and return the index of the peak element in O(log(n)) time complexity.
 
 ## Example 1:
-
-**Input**: arr = [0,1,0]  
-**Output**: 1
+Input: arr = [0,1,0]  
+Output: 1
 
 ## Example 2:
-
-**Input**: arr = [0,2,1,0]  
-**Output**: 1
+Input: arr = [0,2,1,0]  
+Output: 1
 
 ## Example 3:
-
-**Input**: arr = [0,10,5,2]  
-**Output**: 1
-
-## Constraints:
-
-- `3 <= arr.length <= 10^5`
-- `0 <= arr[i] <= 10^6`
-- The array is guaranteed to be a mountain array.
+Input: arr = [0,10,5,2]  
+Output: 1
 
 ## Approach:
 
@@ -34,8 +24,9 @@ Your task is to find and return the index of the peak element in O(log(n)) time 
 5. If the left neighbor is greater than `mid`, search in the left half; otherwise, search in the right half.
 6. Continue until the peak index is found.
 
-## Solution Implementation:
-```cpp
+*/
+/*Solution Implementation: */
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -66,13 +57,20 @@ public:
         return -1; // Return -1 if no peak is found
     }
 };
-```
+/*
+
 ## Time Complexity:
 - **O(log n)**: Each step reduces the search space by half.
 
 ## Space Complexity:
 - **O(1)**: No extra space is used; only a few variables are required for pointers and indices.
 
+## Constraints:
+- `3 <= arr.length <= 10^5`
+- `0 <= arr[i] <= 10^6`
+- The array is guaranteed to be a mountain array.
+
 ## Resouce
 [LeetCode](https://leetcode.com/problems/peak-index-in-a-mountain-array/)
 
+*/
