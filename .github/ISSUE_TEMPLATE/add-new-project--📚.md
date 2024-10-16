@@ -1,6 +1,6 @@
 ---
-name: "Add New Project  \U0001F4DA"
-about: Requesting for the new project to contribute in this repository.
+name: "Add New Algorithm  \U0001F4DA"
+about: Requesting for the new Algorithm to contribute in this repository.
 title: "\U0001F4C3: "
 labels: ''
 assignees: ''
