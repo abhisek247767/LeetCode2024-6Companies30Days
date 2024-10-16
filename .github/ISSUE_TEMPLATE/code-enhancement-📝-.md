@@ -1,6 +1,6 @@
 ---
 name: "Code enhancement \U0001F4DD "
-about: Improving any styling or function of the existing project
+about: Improving any algorithm or function of the existing project
 title: "\U0001F9D1‍\U0001F4BB : "
 labels: ''
 assignees: ''
