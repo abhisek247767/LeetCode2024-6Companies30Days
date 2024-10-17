@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 🟢 Title :
-🟢 Tech stack :
+🟢 Programming language :
 🟢 Objective :
 🟢 Summary :
 
