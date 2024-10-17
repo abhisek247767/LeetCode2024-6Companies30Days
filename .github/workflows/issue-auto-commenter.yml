@@ -39,7 +39,7 @@ jobs:
                 owner: owner,
                 repo: repo,
                 issue_number: parseInt(issue_number),
-                body: '👋 Thanks for opening this issue! We appreciate your contribution. Please make sure you have provided all the necessary details and donot forget to star the repository and follow me in github and read our Guidelines and Code of Conduct. Happy coding! 🚀'
+                body: 'Please star the repository and follow me in github. And thanks for opening this issue! We appreciate your feedback and will look into it as soon as possible.'
               });
               
               console.log('API call details:', JSON.stringify({
