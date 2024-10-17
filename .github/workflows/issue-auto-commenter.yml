@@ -9,14 +9,34 @@ jobs:
     permissions:
       issues: write
     steps:
+      - name: Debug Info
+        run: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Issue number: ${{ github.event.issue.number }}"
+          echo "Actor: ${{ github.actor }}"
+
       - name: Add comment to new issue
         uses: actions/github-script@v7
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.name,
-              body: '👋 Thanks for opening this issue! We appreciate your feedback and will look into it as soon as possible.'
-            })
+            const owner = context.repo.owner;
+            const repo = 'LeetCode2024-6Companies30Days';  // Explicitly set the repository name
+            const issue_number = context.issue.number;
+            
+            console.log(`Debug: owner=${owner}, repo=${repo}, issue_number=${issue_number}`);
+            
+            try {
+              const result = await github.rest.issues.createComment({
+                owner: owner,
+                repo: repo,
+                issue_number: issue_number,
+                body: '👋 Thanks for opening this issue! We appreciate your feedback and will look into it as soon as possible.'
+              });
+              console.log('Comment added successfully. Status:', result.status);
+            } catch (error) {
+              console.error('Error adding comment:', error);
+              console.error('Error details:', JSON.stringify(error, null, 2));
+              core.setFailed(`Action failed with error: ${error.message}`);
+            }
