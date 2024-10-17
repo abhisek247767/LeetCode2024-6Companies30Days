@@ -22,7 +22,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const owner = context.repo.owner;
-            const repo = context.repo.repo;  // Dynamically get the repository name
+            const repo = context.repo.repo;  // Fix repository name retrieval
             const issue_number = context.issue.number;
 
             console.log(`Debug: owner=${owner}, repo=${repo}, issue_number=${issue_number}`);
