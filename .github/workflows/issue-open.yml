@@ -20,21 +20,22 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const owner = context.repo.owner;
-            const repo = context.repo.name;
+            const owner = 'abhisek247767';
+            const repo = 'LeetCode2024-6Companies30Days';
             const issue_number = context.issue.number;
             
             console.log(`Attempting to comment on issue ${issue_number} in ${owner}/${repo}`);
             
             try {
-              await github.rest.issues.createComment({
+              const result = await github.rest.issues.createComment({
                 owner: owner,
                 repo: repo,
                 issue_number: issue_number,
                 body: '👋 Thanks for opening this issue! We appreciate your feedback and will look into it as soon as possible.'
               });
-              console.log('Comment added successfully');
+              console.log('Comment added successfully. Response:', JSON.stringify(result, null, 2));
             } catch (error) {
               console.error('Error adding comment:', error);
-              core.setFailed(`Action failed with error: ${error}`);
+              console.error('Error details:', JSON.stringify(error, null, 2));
+              core.setFailed(`Action failed with error: ${error.message}`);
             }
