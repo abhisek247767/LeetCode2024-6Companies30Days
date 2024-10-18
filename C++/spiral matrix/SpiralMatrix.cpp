@@ -1,58 +1,75 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+// question-- Spiral Matrix
+
+// Given an m x n matrix, return all elements of the matrix in spiral order.
+
+ 
+// output--
+// Example 1:
+
+
+// Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+// Output: [1,2,3,6,9,8,7,4,5]
+// Example 2:
+
+
+// Input: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+// Output: [1,2,3,4,8,12,11,10,9,5,6,7]
+
+
+#include<iostream>
+#include<vector>
 using namespace std;
-vector<int> spiralPathMatrix(vector<vector<int>> matrix, int n, int m)
-{
-    // Write your code here.
+void spiralOrder(vector<vector<int>>&matrix){
+    int left=0;
+    int right=matrix[0].size()-1;
+    int top=0;
+    int bottom=matrix.size()-1;
 
-    vector<int> ans;
-    int row = matrix.size();
-    int col = matrix[0].size();
-
-    int count = 0;
-    int total = row * col;
-
-    // index initialisation
-    int startingRow = 0;
-    int startingCol = 0;
-    int endingRow = row - 1;
-    int endingCol = col - 1;
-
-    while (count < total)
-    {
-
-        // print starting row
-        for (int index = startingCol; count < total && index <= endingCol; index++)
-        {
-            ans.push_back(matrix[startingRow][index]);
-            count++;
+    int direction=0;
+    while(left<=right && top<=bottom){
+        //left to right
+        if(direction==0){
+            for(int col=left;col<=right;col++){
+                cout<<matrix[top][col]<<" ";
+            }
+            top++;
         }
-        startingRow++;
-
-        // print ending column
-        for (int index = startingRow; count < total && index <= endingRow; index++)
-        {
-            ans.push_back(matrix[index][endingCol]);
-            count++;
+        //top to bottom
+        else if(direction==1){
+            for(int row=top;row<=bottom;row++){
+                cout<<matrix[row][right]<<" ";
+            }
+            right--;
         }
-        endingCol--;
-
-        // print ending row
-        for (int index = endingCol; count < total && index >= startingCol; index--)
-        {
-            ans.push_back(matrix[endingRow][index]);
-            count++;
+        //right to left
+        else if(direction==2){
+            for(int col=right;col>=left;col--){
+                cout<<matrix[bottom][col]<<" ";
+            }
+            bottom--;
         }
-        endingRow--;
-
-        // print starting column
-        for (int index = endingRow; count < total && index >= startingRow; index--)
-        {
-            ans.push_back(matrix[index][startingCol]);
-            count++;
+        //bottom to top
+        else{
+            for(int row=bottom;row>=top;row--){
+                cout<<matrix[row][left]<<" ";
+            }
+            left++;
         }
-        startingCol++;
+        direction=(direction+1)%4;
+        // it should be 0,1,2,3.
+
     }
-    return ans;
-};
+}
+int main(){
+    int n,m;
+    cout<<"enter number of rows and columns: ";
+    cin>>n>>m;
+    vector<vector<int>>matrix(n,vector<int>(m));
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cin>>matrix[i][j];
+        }
+    }
+    spiralOrder(matrix);
+    return 0;
+}
