@@ -1,7 +1,12 @@
 name: Auto Comment on PR Merge
+
 on:
   pull_request:
     types: [closed]
+
+permissions:
+  pull-requests: write
+
 jobs:
   comment:
     runs-on: ubuntu-latest
