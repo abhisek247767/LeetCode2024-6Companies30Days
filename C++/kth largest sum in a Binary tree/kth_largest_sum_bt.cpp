@@ -38,14 +38,14 @@ public:
     deque<TreeNode*> q;
 
     void bfs(TreeNode* root){
-        q.push_back(root);
+        q.push_back(root); //pushes the current head into the queue
 
-        while(!q.empty()){
+        while(!q.empty()){// while the tree still has values
             long long sum = 0;
-            int n = q.size();
-            for(int i=0;i<n;i++){
+            int n = q.size(); 
+            for(int i=0;i<n;i++){ //traversing each level, one at a time
                 TreeNode* node = q.front();
-                sum += node -> val;
+                sum += node -> val; // sum at each level
 
                 if(node -> left){
                     q.push_back(node -> left);
@@ -55,15 +55,15 @@ public:
                 }
                 q.pop_front();
             }
-            ans.push_back(sum);
+            ans.push_back(sum); // storing the sum at each level
         }
     }
     long long kthLargestLevelSum(TreeNode* root, int k) {
-        bfs(root);
-        if(ans.size() < k){
+        bfs(root); // bfs function called
+        if(ans.size() < k){ // if there are less than k levels
             return -1;
         }
-        sort(ans.rbegin(), ans.rend());
+        sort(ans.rbegin(), ans.rend()); // to get the kth largest value
         return ans[k-1];
     }
 };
