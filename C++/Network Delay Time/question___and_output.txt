@@ -1,0 +1,34 @@
+Problem Statement:
+743. Network Delay Time
+
+You are given a network of `n` nodes, labeled from `1` to `n`. You are provided with a list of travel times as directed edges, 
+where `times[i] = (ui, vi, wi)` represents a directed edge from node `ui` to node `vi` with a travel time of `wi`. This means it takes 
+`wi` units of time for a signal to travel from `ui` to `vi`.
+
+A signal is sent from a starting node `k`. The task is to determine the minimum time needed for all `n` nodes in the network to receive 
+the signal. If it's impossible for all nodes to receive the signal, return `-1`.
+
+Parameters:
+- `times`: A list of directed edges where `times[i] = (ui, vi, wi)` represents:
+ - `ui`: Source node
+ - `vi`: Destination node
+ - `wi`: Travel time from ui to vi
+- `n`: Total number of nodes in the network (labeled from 1 to n)
+- `k`: Starting node from which the signal is sent
+
+Return:
+- Minimum time required for all nodes to receive the signal
+- `-1` if any node is unreachable
+
+Examples:
+1. Input: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2
+   Output: 2
+   Explanation: Signal starts at node 2, reaches nodes 1 and 3 in 1 unit time, then reaches node 4 in 2 units time.
+
+2. Input: times = [[1,2,1]], n = 2, k = 1
+   Output: 1
+   Explanation: Signal starts at node 1 and reaches node 2 in 1 unit time.
+
+3. Input: times = [[1,2,1]], n = 2, k = 2
+   Output: -1
+   Explanation: Signal starts at node 2 but can't reach node 1.
