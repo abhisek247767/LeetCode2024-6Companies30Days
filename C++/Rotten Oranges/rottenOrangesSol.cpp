@@ -1,3 +1,22 @@
+/* 
+Problem Statement: For a given m x n grid, where each cell has the following values : 
+
+2  -  represents a rotten orange
+1  -  represents a Fresh orange
+0  -  represents an Empty Cell
+
+Every minute, if a Fresh Orange is adjacent to a Rotten Orange in 4-direction ( upward, downwards, right, and left ) it becomes Rotten. 
+Return the minimum number of minutes required such that none of the cells has a Fresh Orange. If it's not possible, return -1.
+
+Example: 
+Input: grid - [ [2,1,1] , [0,1,1] , [1,0,1] ]
+Output: -1
+
+Time Complexity: O ( n x n ) x 4    
+Space Complexity: O ( n x n )
+
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
