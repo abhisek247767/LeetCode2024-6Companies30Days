@@ -126,6 +126,12 @@ Thanks to these amazing contributors who have helped make this repository better
 
 
 ---
+## Maintainer
 
+To get approval of the pull request much quicker and faster (`Follow Me`)🚀
+<tr><td align="center"><a href="https://github.com/abhisek247767"><kbd><img src="https://avatars3.githubusercontent.com/abhisek247767?size=100" width="100px;" alt=""/></kbd><br /><sub><b>Abhisek Roy</b></sub></a><br /></td>
+
+</tr>
+<br />
 Hurrah!! 🎉 You’ve made your first contribution! Let’s continue contributing to open source and make this Hacktoberfest a success!
 
