@@ -3,7 +3,7 @@
 # Hacktoberfest 2024 🎉
 This repository is designed to encourage contributions to open source throughout the month of October as part of Hacktoberfest. Follow me on GitHub 🙊 and join in the fun of contributing to this exciting open-source project.
 
-![image](https://github.com/user-attachments/assets/87d213ea-935b-4484-ac3d-8fcc13a53cf6)
+<img width="1382" height="682" alt="image" src="https://github.com/user-attachments/assets/5887c1a2-83d7-4969-8f01-2d53977ff84d" />
 
 ---
 
