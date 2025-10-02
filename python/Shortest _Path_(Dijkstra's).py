@@ -1,3 +1,18 @@
+# Problem Statement:
+# Given a road network of cities with travel times, find the shortest travel time from a start city to all other cities using Dijkstra's algorithm.
+
+# Time Complexity: O((V + E) * log V), where V is the number of vertices and E is the number of edges.
+# Space Complexity: O(V + E), for the adjacency list and distance tracking.
+
+# Output:
+# Shortest travel times starting from A:
+#   To A: 0 minutes
+#   To B: 7 minutes
+#   To C: 9 minutes
+#   To D: 20 minutes
+#   To E: 26 minutes
+#   To F: 11 minutes
+
 import heapq
 
 class Graph:
