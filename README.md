@@ -52,6 +52,7 @@ Hello Hacktoberfest
 Hello Hacktoberfest
 
 ---
+### Make sure push the code in appropiate folder like if code is on C++ push on C++ folder
 
 ## Steps To Contribute To This Repository 🚀
 
