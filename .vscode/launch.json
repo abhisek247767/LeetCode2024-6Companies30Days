@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/vishnugupta2711/Document/DON'T TOUCH/OPEN_SOURCE/LeetCode2024-6Companies30Days",
+      "program": "/Users/vishnugupta2711/Document/DON'T TOUCH/OPEN_SOURCE/LeetCode2024-6Companies30Days/build/Debug/outDebug"
+    }
+  ]
+}
