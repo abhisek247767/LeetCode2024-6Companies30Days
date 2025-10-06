@@ -1,3 +1,33 @@
+// Problem:
+// You are given a doubly linked list (DLL) where the nodes are sorted in non-decreasing order.
+//  Some values in the DLL may be repeated consecutively. Write a program to remove all duplicate nodes
+//   from the DLL such that each value appears only once.
+
+// Input:
+
+// A vector of integers representing the elements of the DLL in order.
+// Example: {1, 1, 1, 3, 3, 4, 5, 5}
+
+// Output:
+
+// The elements of the DLL before removing duplicates.
+// The elements of the DLL after removing duplicates.
+
+// Functions in the code:
+
+// creatingDLL(vector<int>& vec): Creates a doubly linked list from a vector.
+// removeDuplicate(Node* head): Removes consecutive duplicate elements from a sorted doubly linked list.
+
+// ✅ Total time complexity: O(n)
+
+// Space Complexity
+
+// The algorithm uses no extra data structures, only pointers to traverse the DLL.
+// DLL nodes themselves are stored dynamically.
+
+// ✅ Auxiliary space complexity: O(1)
+// ✅ Overall space including nodes: O(n)
+
 #include<bits/stdc++.h>
 using namespace std;
 
