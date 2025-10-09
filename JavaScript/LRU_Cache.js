@@ -19,16 +19,15 @@ class LRUCache {
      */
     constructor(capacity) {
         this.capacity = capacity;
-        this.map = new Map(); // For O(1) lookup of nodes.
+        this.map = new Map(); 
         
-        // Dummy head and tail nodes to handle edge cases easily.
         this.head = new Node(-1, -1);
         this.tail = new Node(-1, -1);
         this.head.next = this.tail;
         this.tail.prev = this.head;
     }
     
-    // Helper to remove a node from the list.
+
     _remove(node) {
         const prevNode = node.prev;
         const nextNode = node.next;
@@ -36,7 +35,6 @@ class LRUCache {
         nextNode.prev = prevNode;
     }
 
-    // Helper to add a node to the front of the list (most recently used).
     _addToFront(node) {
         const nextNode = this.head.next;
         this.head.next = node;
@@ -54,7 +52,7 @@ class LRUCache {
         }
 
         const node = this.map.get(key);
-        // Move the accessed node to the front to mark it as most recently used.
+
         this._remove(node);
         this._addToFront(node);
         
@@ -66,7 +64,7 @@ class LRUCache {
      * @return {void}
      */
     put(key, value) {
-        // If key already exists, update its value and move it to the front.
+
         if (this.map.has(key)) {
             const node = this.map.get(key);
             node.value = value;
@@ -75,14 +73,14 @@ class LRUCache {
             return;
         }
 
-        // If the cache is full, evict the least recently used item.
+
         if (this.map.size === this.capacity) {
             const lruNode = this.tail.prev;
             this._remove(lruNode);
             this.map.delete(lruNode.key);
         }
 
-        // Add the new item.
+
         const newNode = new Node(key, value);
         this.map.set(key, newNode);
         this._addToFront(newNode);
