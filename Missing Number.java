@@ -14,6 +14,8 @@ class Solution {
         
         // The remaining sum is the missing number
         return originalSum;
+
+        
     }
 }
 
@@ -26,3 +28,4 @@ Output: 6
 Explanation:
 The array contains numbers from 0 to 8, except for 6. The missing number is 6.
  */
+
