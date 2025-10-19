@@ -1,23 +1,22 @@
 function twoSum(nums, target) {
-    const numMap = {};
+    const seen = new Map(); // Use Map for better performance on large datasets
 
     for (let i = 0; i < nums.length; i++) {
-        const complement = target - nums[i];
+        const num = nums[i];
+        const complement = target - num;
 
-        if (numMap[complement] !== undefined) {
-            return [numMap[complement], i];
+        if (seen.has(complement)) {
+            return [seen.get(complement), i]; // Return the pair of indices
         }
 
-        numMap[nums[i]] = i; // Store the index of the current number
+        seen.set(num, i); // Store the current number with its index
     }
 
     throw new Error("No two sum solution found");
 }
 
-// Example Usage
+// Example usage
 const nums = [2, 7, 11, 15];
 const target = 9;
+
 console.log(twoSum(nums, target)); // Output: [0, 1]
-
-
-// feature/two-sum
