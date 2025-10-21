@@ -1,11 +1,11 @@
 """
 Program: Kth Largest and Kth Smallest Element Finder
-Author: <your_name>
 Description:
   This program finds the Kth smallest and Kth largest elements in an array
   using the heapq (min-heap / max-heap) data structure.
+  Time Complexity : O(n + k log n)
+  Space Complexity : O(1)
 """
-
 import heapq
 
 def kth_smallest(arr, k):
