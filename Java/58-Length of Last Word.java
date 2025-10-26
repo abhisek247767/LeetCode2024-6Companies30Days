@@ -1,40 +1,20 @@
-/* 
-
-https://leetcode.com/problems/length-of-last-word/description/
-
-Given a string s consisting of words and spaces, return the length of the last word in the string.
-
-A word is a maximal 
-substring
- consisting of non-space characters only. */
-
- class Solution {
+class Solution {
     public int lengthOfLastWord(String s) {
+        // Remove leading and trailing spaces
+        String trimmed = s.trim();
         int len = 0;
-        String x = s.trim();
 
-        for (int i = 0; i < x.length(); i++) {
-            if (x.charAt(i) == ' ')
+        // Iterate through each character
+        for (int i = 0; i < trimmed.length(); i++) {
+            if (trimmed.charAt(i) == ' ') {
+                // Reset length when a space is encountered
                 len = 0;
-            else
+            } else {
+                // Increment length for a non-space character
                 len++;
+            }
         }
- 
-        return len;
+
+        return len; // Length of the last word
     }
 }
-
-/* 
-Example 1:
-
-Input: s = "Hello World"
-Output: 5
-Explanation: The last word is "World" with length 5.
-
-Example 2:
-
-Input: s = "   fly me   to   the moon  "
-Output: 4
-Explanation: The last word is "moon" with length 4.
-
-*/

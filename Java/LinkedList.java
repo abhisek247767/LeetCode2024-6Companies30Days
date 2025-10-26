@@ -13,6 +13,7 @@
 // 1.The user will be presented with a menu of operations.
 // 2.The user will input their choice of operation, followed by any required book titles or positions.
 // 3.The program will display appropriate messages and the current list of books.
+t;
 import java.util.Scanner;
 
 import static java.lang.System.exit;
@@ -22,8 +23,7 @@ public class LinkedList {
 
     public static class Node {
         int data;
-        Node next;
-
+        Node nex
         Node(int val) {
             data = val;
             next = null;

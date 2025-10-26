@@ -25,19 +25,25 @@ class Node {
 class Solution {
     public List<Integer> postorder(Node root) {
         List<Integer> result = new ArrayList<>();
-        if (root == null) return result;
+        if (root == null) return result; // Empty tree case
         postorderHelper(root, result);
         return result;
     }
     
+    // Helper method to recursively traverse the tree
     private void postorderHelper(Node node, List<Integer> result) {
         if (node == null) return;
+        
+        // Visit all children first
         for (Node child : node.children) {
             postorderHelper(child, result);
         }
+        
+        // Add the current node's value after its children
         result.add(node.val);
     }
 }
+
 
 /*
 Example 1:
