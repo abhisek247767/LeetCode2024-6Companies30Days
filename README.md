@@ -149,10 +149,10 @@ Following me on GitHub helps me approve your pull request faster and keeps you i
 
 Thanks to these amazing contributors who have helped make this repository better!
 
-[![Contributors](https://contrib.rocks/image?repo=abhisek247767/LeetCode2024-6Companies30Days&cacheBuster=123)](https://github.com/abhisek247767/LeetCode2024-6Companies30Days/graphs/contributors)
-
+[![Contributors](https://contrib.rocks/image?repo=Rajvansh-1/LeetCode2024-6Companies30Days&cacheBuster=123)](https://github.com/Rajvansh-1/LeetCode2024-6Companies30Days/graphs/contributors)
 
 ---
+
 ## Maintainer
 
 To get approval of the pull request much quicker and faster (`Follow Me`)🚀
