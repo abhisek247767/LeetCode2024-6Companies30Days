@@ -1,4 +1,18 @@
-// Copy List with Random Pointer
+// 138. Copy List with Random Pointer
+// Problem Statement: A linked list is given where each node has a next pointer and a random pointer. 
+// Return a deep copy of the list.
+//
+// Input: head = [[7,null],[13,0],[11,4],[10,2],[1,0]]
+// Output: A deep copy of the list
+// Explanation: Each node is copied with both next and random pointers preserved.
+//
+// Constraints:
+// - The number of nodes in the list is in the range [0, 1000].
+// - -10^4 <= Node.val <= 10^4
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
 #include <bits/stdc++.h>
 using namespace std;
 

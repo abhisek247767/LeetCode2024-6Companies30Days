@@ -1,4 +1,20 @@
-// Reverse Nodes in k-Group
+// 25. Reverse Nodes in k-Group
+// Problem Statement: Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
+// k is a positive integer <= length of the list. 
+// If nodes left < k, leave them as-is.
+//
+// Input: head = [1,2,3,4,5], k = 2
+// Output: [2,1,4,3,5]
+// Explanation: Nodes are reversed in groups of 2.
+//
+// Constraints:
+// - The number of nodes is in the range [1, 5000].
+// - 0 <= Node.val <= 1000
+// - 1 <= k <= length of the list
+//
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
 #include <bits/stdc++.h>
 using namespace std;
 

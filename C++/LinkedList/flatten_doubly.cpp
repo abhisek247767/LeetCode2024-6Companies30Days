@@ -1,4 +1,19 @@
-// Flatten a Multilevel Doubly Linked List
+// 430. Flatten a Multilevel Doubly Linked List
+// Problem Statement: You are given a doubly linked list, which in addition to the next and previous pointers, 
+// it could have a child pointer. Flatten the list so that all nodes appear in a single-level doubly linked list.
+//
+// Input: 1--2--3
+//           |
+//           4--5
+// Output: 1--2--3--4--5
+// Explanation: Child list is inserted into the main list.
+//
+// Constraints:
+// - The number of nodes in the list is in the range [0, 1000].
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n) in worst case (stack)
+
 #include <bits/stdc++.h>
 using namespace std;
 
