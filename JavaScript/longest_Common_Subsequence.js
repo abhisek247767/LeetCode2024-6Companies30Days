@@ -1,8 +1,11 @@
 /**
- * @param {string} text1
- * @param {string} text2
- * @return {number}
+ * Finds the length of the Longest Common Subsequence (LCS) between two strings.
+ * Uses dynamic programming with O(m * n) time and O(m * n) space complexity.
+ * @param {string} text1 - First string
+ * @param {string} text2 - Second string
+ * @return {number} Length of the longest common subsequence
  */
+
 var longestCommonSubsequence = function(text1, text2) {
     // Lengths of the input strings
     const length1 = text1.length;
